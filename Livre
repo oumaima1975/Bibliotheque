@@ -1,3 +1,44 @@
-public class Livre{
-//
-}
+package Bibliotheque;
+
+import java.util.Date;
+
+public class Livre {
+	    private String nomAuteur, nomEditeur, genre;
+	    private Date dateEdition;
+	    private Monnaie prix;
+	    
+	    public String getNomAuteur(){
+	    	return this.nomAuteur;
+	    }
+	    public String getNomEditeur() {
+	    	return this.nomEditeur;
+	    }
+	    public String getGenre() {
+	    	return this.genre;
+	    }
+	    public Date getDateEdit() {
+	    	return this.dateEdition;
+	    }
+	    public Monnaie getPrix() {
+	    	return this.prix;
+	    }
+	    public void setNomAuteur(String auteur) {
+	    	this.nomAuteur = auteur;
+	    }
+	    public void setNomEditeur(String editeur) {
+	    	this.nomEditeur = editeur;
+	    }
+	    public void setGenre(String genre) {
+	    	this.genre = genre;
+	    }
+	    public void setDateEdit(Date date) {
+	    	this.dateEdition = date;
+	    }
+	    public void setPrix(Monnaie prix) {
+	    	this.prix = prix;
+	    }
+	    
+	    
+	    
+	}
+
