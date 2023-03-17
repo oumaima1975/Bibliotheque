@@ -26,7 +26,7 @@ public class VerificateurMotDePasse {
         }
         
         // Vérifie qu'il y a au moins une lettre majuscule, une lettre minuscule et un chiffre
-        if (!aMajuscule || !aMinuscule || !aChiffre || aCarcSpec) {
+        if (!aMajuscule || !aMinuscule || !aChiffre ) {
             return false;
         }
         
