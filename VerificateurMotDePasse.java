@@ -41,6 +41,14 @@ public class VerificateurMotDePasse {
     public static boolean isCaracSpec(char cr) {
         // Vérifie si le caractère est un caractère spécial
         // Retourne true s'il est spécial, false sinon
-        return false;
+        char[] caracteresSpeciaux = {'!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '-', '=', '{', '}', '|', '[', ']', '\\', ':', '\"', ';', '\'', '<', '>', '?', ',', '.', '/'};
+        for (char c : caracteresSpeciaux) {
+             if (c == cr) {
+             return true;
+             }
+        }
+    return false;
     }
+
 }
+
