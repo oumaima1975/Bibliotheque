@@ -1,3 +1,5 @@
+package Bibliotheque;
+
 public class VerificateurMotDePasse {
 
     public static boolean estValide(String motDePasse) {
