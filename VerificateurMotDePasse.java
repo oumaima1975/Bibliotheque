@@ -30,7 +30,7 @@ public class VerificateurMotDePasse {
                 
        }
         
-        // Vérifie qu'il y a au moins une lettre majuscule, une lettre minuscule et un chiffre
+        // Vérifie qu'il y a au moins une lettre majuscule, une lettre minuscule et un chiffre et un caractere special
         if (!aMajuscule || !aMinuscule || !aChiffre || !aCarcSpec) {
             return false;
         }
