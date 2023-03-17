@@ -22,13 +22,7 @@ public class VerificateurMotDePasse {
                 aMinuscule = true;
             } else if (Character.isDigit(c)) {
                 aChiffre = true;
-            } else if (isCaracSpec(c)) {
-            	aCarcSpec = true;
-            }
-        }
-        
-        public boolean isCaracSpec(char cr) {
-        	
+            } 
         }
         
         // Vérifie qu'il y a au moins une lettre majuscule, une lettre minuscule et un chiffre
