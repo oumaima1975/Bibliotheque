@@ -1,0 +1,35 @@
+Epic 1: Gestion des membres
+  Feature 1.1: Gestion des informations des membres
+    US 1.1.1: Ajouter, modifier et supprimer des informations sur les membres
+    US 1.1.2: Accepter ou rejeter la demande d’adhésion d’un utilisateur
+    US 1.1.3: Vérifier l'état d'adhésion d'un membre et modifier la date d’expiration de son adhésion
+
+Epic 2: Gestion du catalogue
+  Feature 2.1: Gestion des informations sur les livres et autres médias
+    US 2.1.1: Ajouter, modifier et supprimer des informations sur les livres et autres médias
+    US 2.1.2: Classer les livres et les films par catégorie, et les musiques par artiste
+    US 2.1.3: Rechercher des livres, musiques, films, etc. à partir de différents critères
+    US 2.1.4: Consulter des informations sur les livres, comme leur description et disponibilité
+  Feature 2.2: Gestion des emprunts et réservations
+    US 2.2.1: Vérifier l'état d'un emprunt, comme la date d'emprunt et la date de retour
+    US 2.2.2: Réserver des livres pour les récupérer ultérieurement
+    US 2.2.3: Consulter l'historique d'emprunts et de réservations
+  Feature 2.3: Gestion des recommandations et avis
+    US 2.3.1: Laisser des avis sur les livres, films, etc.
+    US 2.3.2: Créer des listes de livres à lire ou des films à voir, etc.
+    US 2.3.3: Consulter les propositions de livres similaires à ceux empruntés ou consultés
+
+Epic 3: Gestion des événements et activités
+  Feature 3.1: Organisation d'événements et activités
+    US 3.1.1: Organiser des activités comme des conférences
+    US 3.1.2: Consulter les événements et activités organisés par la bibliothèque
+
+Epic 4: Communication entre employés et utilisateurs
+  Feature 4.1: Communication
+    US 4.1.1: Communiquer avec les utilisateurs en cas de besoin (par exemple, rappeler les dates de retour des emprunts)
+    US 4.1.2: Communiquer avec les employés concernant des observations sur l'état des livres réservés
+
+Epic 5: Gestion des comptes utilisateurs
+  Feature 5.1: Gestion du compte utilisateur
+    US 5.1.1: S'inscrire à la bibliothèque, renouveler son adhésion et consulter la date d'expiration de son adhésion
+    US 5.1.2: Gérer son 
