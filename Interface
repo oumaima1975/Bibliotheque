@@ -1,0 +1,101 @@
+package CoursSwing;
+
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class iteration0 {
+    public static void main(String[] args) {
+
+                new FenetrePrincipale();     
+    }
+}
+
+class FenetrePrincipale extends JFrame {
+
+    public FenetrePrincipale() {
+    	JFrame fenetre = new JFrame("Ma bibliothèque");
+        fenetre.setSize(400, 200);
+        fenetre.setLayout(new FlowLayout());
+
+        JButton btnEmploye = new JButton("Employé");
+        JButton btnUtilisateur = new JButton("Utilisateur");
+        JButton btnInscription = new JButton("S'inscrire");
+        
+        fenetre.add(btnEmploye);
+        fenetre.add(btnUtilisateur);
+        fenetre.add(btnInscription);
+
+        btnInscription.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	dispose(); // Ferme la fenêtre principale
+                new FenetreInscription();
+                
+            }
+        });
+
+
+
+        fenetre.setVisible(true);
+    }
+}
+
+class FenetreInscription extends JFrame {
+
+    public FenetreInscription() {
+    	JFrame fenetre = new JFrame("Inscription");
+    	fenetre.setSize(400, 300);
+    	fenetre.setLayout(new GridLayout(6, 1));
+        
+    	fenetre.add(new JLabel("Nom et prénom"));
+    	JTextField txtNomPrenom = new JTextField();
+        fenetre.add(txtNomPrenom);
+        
+        fenetre.add(new JLabel("Date de naissance (JJ/MM/AAAA)"));
+        JTextField txtDateNaissance = new JTextField();
+        fenetre.add(txtDateNaissance);
+        
+        fenetre.add(new JLabel("Adresse mail : "));
+        JTextField txtEmail = new JTextField();
+        fenetre.add(txtEmail);
+       
+        fenetre.add(new JLabel("Numéro de téléphone"));
+        JTextField txtTelephone = new JTextField();
+        fenetre.add(txtTelephone);
+        
+        
+        JButton btnEnvoyer = new JButton("Envoyer ma demande d’adhésion");
+        fenetre.add(btnEnvoyer);
+        
+        
+        
+        
+        
+
+        btnEnvoyer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String nomPrenom = txtNomPrenom.getText();
+                String dateDeNaissance = txtDateNaissance.getText();
+                String email = txtEmail.getText();
+                String telephone = txtTelephone.getText();
+
+                
+                System.out.println("Nom et prénom: " + nomPrenom);
+                System.out.println("Date de naissance: " + dateDeNaissance);
+                System.out.println("Adresse mail: " + email);
+                System.out.println("Numéro de téléphone: " + telephone);
+
+                JOptionPane.showMessageDialog(null, "Votre demande d'adhésion a été envoyée.");
+                System.exit(0);
+            }
+        });
+
+ 
+
+        fenetre.setVisible(true);
+    }
+}
