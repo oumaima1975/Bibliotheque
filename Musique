@@ -1,2 +1,85 @@
-jiesizqetjeqiryjety
-Elheyba
+/**
+ * La classe Musique représente une musique.
+ */
+public class Musique {
+    private String titre;
+    private String artiste;
+    private int duree;
+
+    /**
+     * Crée une nouvelle instance de la classe Musique avec les informations spécifiées.
+     *
+     * @param titre   Le titre de la musique.
+     * @param artiste L'artiste de la musique.
+     * @param duree   La durée de la musique en secondes.
+     */
+    public Musique(String titre, String artiste, int duree) {
+        this.titre = titre;
+        this.artiste = artiste;
+        this.duree = duree;
+    }
+
+    /**
+     * Renvoie le titre de la musique.
+     *
+     * @return Le titre de la musique.
+     */
+    public String getTitre() {
+        return titre;
+    }
+
+    /**
+     * Modifie le titre de la musique.
+     *
+     * @param titre Le nouveau titre de la musique.
+     */
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    /**
+     * Renvoie l'artiste de la musique.
+     *
+     * @return L'artiste de la musique.
+     */
+    public String getArtiste() {
+        return artiste;
+    }
+
+    /**
+     * Modifie l'artiste de la musique.
+     *
+     * @param artiste Le nouvel artiste de la musique.
+     */
+    public void setArtiste(String artiste) {
+        this.artiste = artiste;
+    }
+
+    /**
+     * Renvoie la durée de la musique en secondes.
+     *
+     * @return La durée de la musique en secondes.
+     */
+    public int getDuree() {
+        return duree;
+    }
+
+    /**
+     * Modifie la durée de la musique en secondes.
+     *
+     * @param duree La nouvelle durée de la musique en secondes.
+     */
+    public void setDuree(int duree) {
+        this.duree = duree;
+    }
+
+    /**
+     * Joue la musique en affichant les informations sur la console.
+     */
+    public void jouer() {
+        System.out.println("Titre : " + titre);
+        System.out.println("Artiste : " + artiste);
+        System.out.println("Durée : " + duree + " secondes");
+        System.out.println("La musique est en train de jouer");
+    }
+}
