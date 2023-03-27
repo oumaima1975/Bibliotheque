@@ -1,0 +1,110 @@
+/**
+ * La classe Film représente un film.
+ */
+public class Film {
+    private String titre;
+    private String realisateur;
+    private int duree;
+    private String[] acteurs;
+
+    /**
+     * Crée une nouvelle instance de la classe Film avec les informations spécifiées.
+     *
+     * @param titre       Le titre du film.
+     * @param realisateur Le réalisateur du film.
+     * @param duree       La durée du film en minutes.
+     * @param acteurs     Les acteurs du film.
+     */
+    public Film(String titre, String realisateur, int duree, String[] acteurs) {
+        this.titre = titre;
+        this.realisateur = realisateur;
+        this.duree = duree;
+        this.acteurs = acteurs;
+    }
+
+    /**
+     * Renvoie le titre du film.
+     *
+     * @return Le titre du film.
+     */
+    public String getTitre() {
+        return titre;
+    }
+
+    /**
+     * Modifie le titre du film.
+     *
+     * @param titre Le nouveau titre du film.
+     */
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    /**
+     * Renvoie le réalisateur du film.
+     *
+     * @return Le réalisateur du film.
+     */
+    public String getRealisateur() {
+        return realisateur;
+    }
+
+    /**
+     * Modifie le réalisateur du film.
+     *
+     * @param realisateur Le nouveau réalisateur du film.
+     */
+    public void setRealisateur(String realisateur) {
+        this.realisateur = realisateur;
+    }
+
+    /**
+     * Renvoie la durée du film en minutes.
+     *
+     * @return La durée du film en minutes.
+     */
+    public int getDuree() {
+        return duree;
+    }
+
+    /**
+     * Modifie la durée du film en minutes.
+     *
+     * @param duree La nouvelle durée du film en minutes.
+     */
+    public void setDuree(int duree) {
+        this.duree = duree;
+    }
+
+    /**
+     * Renvoie les acteurs du film.
+     *
+     * @return Les acteurs du film.
+     */
+    public String[] getActeurs() {
+        return acteurs;
+    }
+
+    /**
+     * Modifie les acteurs du film.
+     *
+     * @param acteurs Les nouveaux acteurs du film.
+     */
+    public void setActeurs(String[] acteurs) {
+        this.acteurs = acteurs;
+    }
+
+    /**
+     * Joue le film en affichant les informations sur la console.
+     */
+    public void jouer() {
+        System.out.println("Titre : " + titre);
+        System.out.println("Réalisateur : " + realisateur);
+        System.out.println("Durée : " + duree + " minutes");
+        System.out.println("Acteurs :");
+        for (String acteur : acteurs) {
+            System.out.println("- " + acteur);
+        }
+        System.out.println("Le film est en train de jouer");
+    }
+}
