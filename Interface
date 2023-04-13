@@ -1,4 +1,4 @@
-package CoursSwing;
+package CoursSwing; //A modifier par package pr...;
 
 import javax.swing.*;
 
@@ -6,69 +6,101 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class iteration0 {
+/**
+ * La classe principale qui démarre l'application du gestion du bibliotheque.
+ */
+
+public class MaBiblio {
     public static void main(String[] args) {
 
                 new FenetrePrincipale();     
     }
 }
 
+/**
+ * La classe FenetrePrincipale représente la fenêtre 
+ * principale de l'application.
+ */
+
 class FenetrePrincipale extends JFrame {
 
     public FenetrePrincipale() {
     	JFrame fenetre = new JFrame("Ma bibliothèque");
-        fenetre.setSize(400, 200);
-        fenetre.setLayout(new FlowLayout());
+
+        Container contenu = fenetre.getContentPane();
+        contenu.setLayout(new BorderLayout());
+
+        JPanel boutons = new JPanel(new FlowLayout());
+        contenu.add(boutons, BorderLayout.CENTER);
 
         JButton btnEmploye = new JButton("Employé");
+        boutons.add(btnEmploye);
+
         JButton btnUtilisateur = new JButton("Utilisateur");
+        boutons.add(btnUtilisateur);
+
         JButton btnInscription = new JButton("S'inscrire");
-        
-        fenetre.add(btnEmploye);
-        fenetre.add(btnUtilisateur);
-        fenetre.add(btnInscription);
+        boutons.add(btnInscription);
 
-        btnInscription.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	dispose(); // Ferme la fenêtre principale
-                new FenetreInscription();
-                
-            }
-        });
-
-
-
+        fenetre.pack();
         fenetre.setVisible(true);
+
+        btnInscription.addActionListener(new ActionListener() 
+           {
+               @Override
+               public void actionPerformed(ActionEvent e) {
+                  fenetre.dispose(); // Ferme la fenêtre principale
+                  new FenetreInscription();
+                }
+           }
+        );
+        
+        
+
     }
 }
+
+/**
+ * La classe FenetreInscription représente la fenêtre d'inscription 
+ * pour un nouveau utilisateur.
+ */
 
 class FenetreInscription extends JFrame {
 
     public FenetreInscription() {
     	JFrame fenetre = new JFrame("Inscription");
-    	fenetre.setSize(400, 300);
-    	fenetre.setLayout(new GridLayout(6, 1));
-        
-    	fenetre.add(new JLabel("Nom et prénom"));
-    	JTextField txtNomPrenom = new JTextField();
-        fenetre.add(txtNomPrenom);
-        
-        fenetre.add(new JLabel("Date de naissance (JJ/MM/AAAA)"));
-        JTextField txtDateNaissance = new JTextField();
-        fenetre.add(txtDateNaissance);
-        
-        fenetre.add(new JLabel("Adresse mail : "));
-        JTextField txtEmail = new JTextField();
-        fenetre.add(txtEmail);
        
-        fenetre.add(new JLabel("Numéro de téléphone"));
+
+        Container contenu = fenetre.getContentPane();
+        contenu.setLayout(new BorderLayout());
+
+        JPanel formulaire = new JPanel(new GridLayout(4, 2));
+        contenu.add(formulaire, BorderLayout.CENTER);
+
+        formulaire.add(new JLabel("Nom et prénom"));
+        JTextField txtNomPrenom = new JTextField();
+        formulaire.add(txtNomPrenom);
+
+        formulaire.add(new JLabel("Date de naissance (JJ/MM/AAAA)"));
+        JTextField txtDateNaissance = new JTextField();
+        formulaire.add(txtDateNaissance);
+
+        formulaire.add(new JLabel("Adresse mail : "));
+        JTextField txtEmail = new JTextField();
+        formulaire.add(txtEmail);
+
+        formulaire.add(new JLabel("Numéro de téléphone"));
         JTextField txtTelephone = new JTextField();
-        fenetre.add(txtTelephone);
-        
-        
-        JButton btnEnvoyer = new JButton("Envoyer ma demande d’adhésion");
-        fenetre.add(btnEnvoyer);
+        formulaire.add(txtTelephone);
+
+        JPanel boutons = new JPanel(new FlowLayout());
+        contenu.add(boutons, BorderLayout.SOUTH);
+
+        JButton btnEnvoyer = new JButton("Envoyer ma demande d'adhésion");
+        boutons.add(btnEnvoyer);
+
+        fenetre.pack();
+        fenetre.setVisible(true);
         
         
         
@@ -94,8 +126,6 @@ class FenetreInscription extends JFrame {
             }
         });
 
- 
-
-        fenetre.setVisible(true);
     }
 }
+
