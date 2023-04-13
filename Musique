@@ -25,7 +25,7 @@ public class Musique {
      * @return Le titre de la musique.
      */
     public String getTitre() {
-        return titre;
+        return this.titre;
     }
 
     /**
@@ -43,7 +43,7 @@ public class Musique {
      * @return L'artiste de la musique.
      */
     public String getArtiste() {
-        return artiste;
+        return this.artiste;
     }
 
     /**
@@ -61,7 +61,7 @@ public class Musique {
      * @return La durée de la musique en secondes.
      */
     public int getDuree() {
-        return duree;
+        return this.duree;
     }
 
     /**
@@ -71,15 +71,5 @@ public class Musique {
      */
     public void setDuree(int duree) {
         this.duree = duree;
-    }
-
-    /**
-     * Joue la musique en affichant les informations sur la console.
-     */
-    public void jouer() {
-        System.out.println("Titre : " + titre);
-        System.out.println("Artiste : " + artiste);
-        System.out.println("Durée : " + duree + " secondes");
-        System.out.println("La musique est en train de jouer");
-    }
+    } 
 }
