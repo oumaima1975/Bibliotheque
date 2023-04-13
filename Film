@@ -28,7 +28,7 @@ public class Film {
      * @return Le titre du film.
      */
     public String getTitre() {
-        return titre;
+        return this.titre;
     }
 
     /**
@@ -46,7 +46,7 @@ public class Film {
      * @return Le réalisateur du film.
      */
     public String getRealisateur() {
-        return realisateur;
+        return this.realisateur;
     }
 
     /**
@@ -64,7 +64,7 @@ public class Film {
      * @return La durée du film en minutes.
      */
     public int getDuree() {
-        return duree;
+        return this.duree;
     }
 
     /**
@@ -82,7 +82,7 @@ public class Film {
      * @return Les acteurs du film.
      */
     public String[] getActeurs() {
-        return acteurs;
+        return this.acteurs;
     }
 
     /**
@@ -92,19 +92,5 @@ public class Film {
      */
     public void setActeurs(String[] acteurs) {
         this.acteurs = acteurs;
-    }
-
-    /**
-     * Joue le film en affichant les informations sur la console.
-     */
-    public void jouer() {
-        System.out.println("Titre : " + titre);
-        System.out.println("Réalisateur : " + realisateur);
-        System.out.println("Durée : " + duree + " minutes");
-        System.out.println("Acteurs :");
-        for (String acteur : acteurs) {
-            System.out.println("- " + acteur);
-        }
-        System.out.println("Le film est en train de jouer");
     }
 }
