@@ -54,6 +54,7 @@ class FenetrePrincipale extends JFrame {
                 }
            }
         );
+
         btnEmploye.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -221,7 +222,7 @@ class FenetreConnexionEmploye extends JFrame {
            {
                @Override
                public void actionPerformed(ActionEvent e) {
-                  String txtNomEmploye = txtNomEmploye.getText();
+                  String NomEmploye = txtNomEmploye.getText();
                   String motDePasse = new String(txtMotDePasse.getPassword());
 
                   // Vérifier les informations de connexion de l'employe ici
@@ -234,4 +235,3 @@ class FenetreConnexionEmploye extends JFrame {
         );
     }
 }
-
