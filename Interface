@@ -54,6 +54,22 @@ class FenetrePrincipale extends JFrame {
                 }
            }
         );
+        btnEmploye.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fenetre.dispose(); // Ferme la fenêtre principale
+                new FenetreConnexionEmploye();
+            }
+        });
+
+        btnUtilisateur.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fenetre.dispose(); // Ferme la fenêtre principale
+                new FenetreConnexionUtilisateur();
+            }
+        });
+
         
         
 
@@ -126,6 +142,96 @@ class FenetreInscription extends JFrame {
             }
         });
 
+    }
+}
+class FenetreConnexionUtilisateur extends JFrame {
+
+    public FenetreConnexionUtilisateur() {
+    	JFrame fenetre = new JFrame("Connexion utilisateur");
+
+        Container contenu = fenetre.getContentPane();
+        contenu.setLayout(new BorderLayout());
+
+        JPanel formulaire = new JPanel(new GridLayout(2, 2));
+        contenu.add(formulaire, BorderLayout.CENTER);
+
+        formulaire.add(new JLabel("Nom d'utilisateur"));
+        JTextField txtNomUtilisateur = new JTextField();
+        formulaire.add(txtNomUtilisateur);
+
+        formulaire.add(new JLabel("Mot de passe"));
+        JPasswordField txtMotDePasse = new JPasswordField();
+        formulaire.add(txtMotDePasse);
+
+        JPanel boutons = new JPanel(new FlowLayout());
+        contenu.add(boutons, BorderLayout.SOUTH);
+
+        JButton btnConnexion = new JButton("Se connecter");
+        boutons.add(btnConnexion);
+
+        fenetre.pack();
+        fenetre.setVisible(true);
+
+        btnConnexion.addActionListener(new ActionListener() 
+           {
+               @Override
+               public void actionPerformed(ActionEvent e) {
+                  String nomUtilisateur = txtNomUtilisateur.getText();
+                  String motDePasse = new String(txtMotDePasse.getPassword());
+
+                  // Vérifier les informations de connexion de l'utilisateur ici
+                
+
+                  fenetre.dispose(); // Ferme la fenêtre de connexion
+                  // Ouvrir l'interface de l'utilisateur connecté ici
+                }
+           }
+        );
+    }
+}
+class FenetreConnexionEmploye extends JFrame {
+
+    public FenetreConnexionEmploye() {
+    	JFrame fenetre = new JFrame("Connexion Employé");
+
+        Container contenu = fenetre.getContentPane();
+        contenu.setLayout(new BorderLayout());
+
+        JPanel formulaire = new JPanel(new GridLayout(2, 2));
+        contenu.add(formulaire, BorderLayout.CENTER);
+
+        formulaire.add(new JLabel("Nom d'employé"));
+        JTextField txtNomEmploye = new JTextField();
+        formulaire.add(txtNomEmploye);
+
+        formulaire.add(new JLabel("Mot de passe"));
+        JPasswordField txtMotDePasse = new JPasswordField();
+        formulaire.add(txtMotDePasse);
+
+        JPanel boutons = new JPanel(new FlowLayout());
+        contenu.add(boutons, BorderLayout.SOUTH);
+
+        JButton btnConnexion = new JButton("Se connecter");
+        boutons.add(btnConnexion);
+
+        fenetre.pack();
+        fenetre.setVisible(true);
+
+        btnConnexion.addActionListener(new ActionListener() 
+           {
+               @Override
+               public void actionPerformed(ActionEvent e) {
+                  String txtNomEmploye = txtNomEmploye.getText();
+                  String motDePasse = new String(txtMotDePasse.getPassword());
+
+                  // Vérifier les informations de connexion de l'employe ici
+                
+
+                  fenetre.dispose(); // Ferme la fenêtre de connexion
+                  // Ouvrir l'interface de l'Employe connecté ici
+                }
+           }
+        );
     }
 }
 
