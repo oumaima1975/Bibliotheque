@@ -1,4 +1,4 @@
-package projet_long;
+package Bibliotheque;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
